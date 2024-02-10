@@ -102,6 +102,7 @@ function NavBar() {
                 <Nav.Link
                   title="ADMIN"
                   onClick={() => {
+                    setCartlength(0);
                     setLogin(false);
                     Navigate("/admin/home");
                   }}

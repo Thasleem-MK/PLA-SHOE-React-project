@@ -53,7 +53,7 @@ function AdminLogin({ children }) {
 
   return (
     <div className="col-12 ps-5 pe-5 d-flex justify-content-center">
-      <div className="col-lg-6 col-12">
+      <div className="col-md-6 col-12">
         <MDBContainer className="p-3 mt-5 d-flex flex-column w-50 vh-100">
           <MDBTabs
             pills
@@ -62,7 +62,7 @@ function AdminLogin({ children }) {
           >
             <MDBTabsItem>
               <MDBTabsLink className="text-white bg-secondary">
-                Admin Login
+                {<p className="h3 my-auto">Admin Login</p>}
               </MDBTabsLink>
             </MDBTabsItem>
           </MDBTabs>
@@ -91,7 +91,7 @@ function AdminLogin({ children }) {
             onChange={(event) => setPassword(event.target.value)}
           />
 
-          <MDBBtn className="mb-4" onClick={AdminSubmit}>
+          <MDBBtn className="mb-4 mx-auto" onClick={AdminSubmit}>
             Sign in
           </MDBBtn>
 
