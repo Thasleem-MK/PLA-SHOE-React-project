@@ -33,7 +33,7 @@ function EachPerson() {
   const { ID } = useParams(); //This is the user name of each person....
   const [display, setDisplay] = useState("Purchase");
   return (
-    <div className="h-100 mb-4" style={{ minHeight: "35rem" }}>
+    <div className="vh-100 mb-4" style={{ minHeight: "35rem" }}>
       <AdminNavBar />
       <div>
         {userData.map((element) => {
