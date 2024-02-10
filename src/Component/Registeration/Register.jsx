@@ -21,7 +21,7 @@ function Register() {
     Email: "",
     Password: "",
     Cart: [],
-    // ConfirmPassword: "",
+    Purchase:[]
   });
   const [, , , , , , , , , , userData, setUserData, , ,] = useContext(Context);
   const [validations, setValidations] = useState({
@@ -126,7 +126,6 @@ function Register() {
           type="password"
           name="ConfirmPassword"
           value={input.ConfirmPassword}
-          // onChange={handleChange}
           pattern={input.Password}
           required
         />

@@ -87,7 +87,7 @@ function NavBar() {
                   <Person />
                 </Nav.Link>
 
-                <Form className="d-flex me-3">
+                <Form className="d-flex">
                   <Form.Control
                     type="search"
                     placeholder="Search"
@@ -104,7 +104,6 @@ function NavBar() {
                   onClick={() => {
                     setLogin(false);
                     Navigate("/admin/home");
-                    console.log(login);
                   }}
                 >
                   <SupervisorAccount />

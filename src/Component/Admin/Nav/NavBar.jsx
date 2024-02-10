@@ -9,12 +9,13 @@ import {
   Person,
   SupervisorAccount,
 } from "@mui/icons-material";
-import "./Style.css";
+import "../../NavBar/Style.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../UseContext/Context";
+import { Button } from "react-bootstrap";
 
-function NavBar() {
+function AdminNavBar() {
   const [
     login,
     setLogin,
@@ -38,9 +39,7 @@ function NavBar() {
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand className="Plashoe">
-            ADMIN PAGE
-          </Navbar.Brand>
+          <Navbar.Brand className="Plashoe" style={{cursor:"default"}}>PLASHOE</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll">
             <Menu />
           </Navbar.Toggle>
@@ -51,9 +50,18 @@ function NavBar() {
               navbarScroll
             >
               <div className="NavLeft">
-                <Nav.Link onClick={() => Navigate("/admin/home")}>HOME</Nav.Link>
-                <Nav.Link onClick={() => Navigate("/admin/usersdeatails")}>USERS</Nav.Link>
-                <Nav.Link onClick={() => Navigate("/admin/productsdeatails")}>PRODUCTS</Nav.Link>
+                <Nav.Link onClick={() => Navigate("/admin/home")}>
+                  HOME
+                </Nav.Link>
+                <Nav.Link onClick={() => Navigate("/admin/usersdeatails")}>
+                  USERS
+                </Nav.Link>
+                <Nav.Link onClick={() => Navigate("/admin/productsdeatails")}>
+                  PRODUCTS
+                </Nav.Link>
+              </div>
+              <div className="NavRight me-3">
+                <Button className="bg-danger" onClick={()=>{setLogin(false);Navigate("/")}}>Logout</Button>
               </div>
             </Nav>
           </Navbar.Collapse>
@@ -66,4 +74,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default AdminNavBar;

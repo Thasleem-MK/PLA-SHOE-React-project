@@ -37,9 +37,9 @@ export default function Cart() {
     const updatedCart = updatedUserData[currentUserIndex].Cart.map(
       (product) => {
         if (product.Name === element.Name) {
-          if (product.Purchase >= 2 && value<0) {
+          if (product.Purchase >= 2 && value < 0) {
             product.Purchase += value; // Decrement Purchase value for the matching product
-          }else if(product.Purchase >= 0 && value>0){
+          } else if (product.Purchase >= 0 && value > 0) {
             product.Purchase += value; // Increment Purchase value for the matching product
           }
         }
@@ -171,6 +171,7 @@ export default function Cart() {
                                                   icon="trash-alt"
                                                   className="text-danger"
                                                   onClick={() => {
+                                                    PurchaseUpdater(element,(-1*(element.Purchase))+1)
                                                     const updatedUserData = [
                                                       ...userData,
                                                     ]; // Create a copy of userData
@@ -349,6 +350,14 @@ export default function Cart() {
                                                     user.UserName ===
                                                     logedUser.UserName
                                                 );
+                                              updatedUserData[
+                                                currentUserIndex
+                                              ].Purchase.push(
+                                                ...updatedUserData[
+                                                  currentUserIndex
+                                                ].Cart
+                                              );  /////Cart push to user Purchased Product Section..........
+
                                               updatedUserData[
                                                 currentUserIndex
                                               ].Cart = [];

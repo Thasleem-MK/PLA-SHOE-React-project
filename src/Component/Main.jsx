@@ -24,6 +24,7 @@ import AdminLogin from "./Admin/AdminLogin/AdminLogin";
 import HomeProtect from "./Admin/Home/HomeProtect";
 import UsersDetails from "./Admin/UsersDetails/UsersDetails";
 import ShowProducts from "./Admin/Products/ShowProducts";
+import EachPerson from "./Admin/UsersDetails/EachPerson";
 
 function Main() {
   const [login, setLogin] = useState(false); //Login state login or logout
@@ -88,9 +89,10 @@ function Main() {
               </HomeProtect>
             }
           />
-          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/usersdeatails" element={<UsersDetails />} />
           <Route path="/admin/productsdeatails" element={<ShowProducts />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/usersdeatails/:ID" element={<EachPerson/>}/> 
         </Routes>
       </Context.Provider>
       <Copyrightfooter />

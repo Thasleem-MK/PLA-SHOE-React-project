@@ -36,7 +36,7 @@ function Collection() {
   const PurchaseUpdater = (element) => {
     const updatedUserData = [...userData]; // Create a copy of userData
     const currentUserIndex = updatedUserData.findIndex(
-      (user) => user.UserName || user.Email === logedUser.UserName
+      (user) => (user.UserName || user.Email) === logedUser.UserName
     );
 
     const updatedCart = updatedUserData[currentUserIndex].Cart.map(
