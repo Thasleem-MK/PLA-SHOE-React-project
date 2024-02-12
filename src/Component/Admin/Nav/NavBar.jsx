@@ -1,13 +1,9 @@
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  Menu,
-  ShoppingCart,
-  Person,
-  SupervisorAccount,
+  Menu
 } from "@mui/icons-material";
 import "../../NavBar/Style.css";
 import { Outlet, useNavigate } from "react-router-dom";

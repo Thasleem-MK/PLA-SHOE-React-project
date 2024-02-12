@@ -32,6 +32,7 @@ function AdminLogin({ children }) {
       } else {
         alert("The given data is not correct");
       }
+      return 0;
     });
   };
 

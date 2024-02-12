@@ -397,6 +397,7 @@ export default function Cart() {
             </div>
           );
         }
+        return 0;
       })}
     </div>
   );

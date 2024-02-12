@@ -2,7 +2,6 @@ import {
   MDBCard,
   MDBCardBody,
   MDBCardImage,
-  MDBIcon,
   MDBTypography,
 } from "mdb-react-ui-kit";
 import React, { useContext, useState } from "react";

@@ -61,6 +61,7 @@ function Collection() {
             setCartlength(User.Cart.length);
           }
         }
+        return 0;
       });
     } else {
       Navigate("/login");
