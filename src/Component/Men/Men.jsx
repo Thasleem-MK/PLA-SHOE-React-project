@@ -28,8 +28,6 @@ function Men() {
     ,
     userData,
     setUserData,
-    ,
-    ,
   ] = useContext(Context);
   const Navigate = useNavigate();
 

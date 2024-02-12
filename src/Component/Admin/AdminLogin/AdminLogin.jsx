@@ -12,24 +12,8 @@ import { Context } from "../../UseContext/Context";
 
 function AdminLogin({ children }) {
   const Navigate = useNavigate();
-  const [
-    login,
-    setLogin,
-    search,
-    setSearch,
-    cartlength,
-    setCartlength,
-    logedUser,
-    setLogedUser,
-    productData,
-    setProductData,
-    userData,
-    setUserData,
-    cartBillAmount,
-    setCartBillAmount,
-    adminData,
-    setAdminData,
-  ] = useContext(Context);
+  const [, setLogin, , , , , , , , , , , , , adminData, ,] =
+    useContext(Context);
   const [name, setName] = useState("");
   const [id, setID] = useState("");
   const [email, setEmail] = useState("");

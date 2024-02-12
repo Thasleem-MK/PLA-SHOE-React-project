@@ -21,9 +21,9 @@ function Register() {
     Email: "",
     Password: "",
     Cart: [],
-    Purchase:[]
+    Purchase: [],
   });
-  const [, , , , , , , , , , userData, setUserData, , ,] = useContext(Context);
+  const [, , , , , , , , , , userData, setUserData] = useContext(Context);
   const [validations, setValidations] = useState({
     Name: false,
     UserName: false,

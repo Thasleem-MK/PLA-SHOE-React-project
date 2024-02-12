@@ -36,24 +36,7 @@ function ShowProducts() {
     price: 0,
     img: "",
   }); //use to store tempararly the new adding element's details
-  const [
-    login,
-    setLogin,
-    search,
-    setSearch,
-    cartlength,
-    setCartlength,
-    logedUser,
-    setLogedUser,
-    productData,
-    setProductData,
-    userData,
-    setUserData,
-    cartBillAmount,
-    setCartBillAmount,
-    adminData,
-    setAdminData,
-  ] = useContext(Context);
+  const [, , , , , , , , productData, setProductData] = useContext(Context);
 
   const handleChange = (event) => {
     if (event.target.value !== "" && event.target.name !== "price") {

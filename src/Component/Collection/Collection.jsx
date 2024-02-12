@@ -27,8 +27,6 @@ function Collection() {
     ,
     userData,
     setUserData,
-    ,
-    ,
   ] = useContext(Context);
   TitleHook("Collection");
   const Navigate = useNavigate();

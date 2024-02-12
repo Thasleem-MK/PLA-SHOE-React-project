@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
   TitleHook("Profile");
-  const [, setLogin, , , , , logedUser, , , , , , , ,] = useContext(Context);
+  const [, setLogin, , , , , logedUser] = useContext(Context);
   const Navigate = useNavigate();
   return (
     <section className="vh-100" style={{ backgroundColor: "#f4f5f7" }}>

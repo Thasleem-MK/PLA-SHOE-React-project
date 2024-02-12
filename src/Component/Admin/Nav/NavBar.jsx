@@ -16,30 +16,15 @@ import { Context } from "../../UseContext/Context";
 import { Button } from "react-bootstrap";
 
 function AdminNavBar() {
-  const [
-    login,
-    setLogin,
-    search,
-    setSearch,
-    cartlength,
-    setCartlength,
-    logedUser,
-    setLogedUser,
-    productData,
-    setProductData,
-    userData,
-    setUserData,
-    cartBillAmount,
-    setCartBillAmount,
-    adminData,
-    setAdminData,
-  ] = useContext(Context);
+  const [, setLogin] = useContext(Context);
   const Navigate = useNavigate();
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand className="Plashoe" style={{cursor:"default"}}>PLASHOE</Navbar.Brand>
+          <Navbar.Brand className="Plashoe" style={{ cursor: "default" }}>
+            PLASHOE
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll">
             <Menu />
           </Navbar.Toggle>
@@ -61,7 +46,15 @@ function AdminNavBar() {
                 </Nav.Link>
               </div>
               <div className="NavRight me-3">
-                <Button className="bg-danger" onClick={()=>{setLogin(false);Navigate("/")}}>Logout</Button>
+                <Button
+                  className="bg-danger"
+                  onClick={() => {
+                    setLogin(false);
+                    Navigate("/");
+                  }}
+                >
+                  Logout
+                </Button>
               </div>
             </Nav>
           </Navbar.Collapse>

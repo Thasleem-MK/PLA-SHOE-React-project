@@ -28,8 +28,6 @@ function Women() {
     ,
     userData,
     setUserData,
-    ,
-    ,
   ] = useContext(Context);
   const Navigate = useNavigate();
 

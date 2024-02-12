@@ -14,24 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { Info } from "@mui/icons-material";
 
 function UsersDetails() {
-  const [
-    login,
-    setLogin,
-    search,
-    setSearch,
-    cartlength,
-    setCartlength,
-    logedUser,
-    setLogedUser,
-    productData,
-    setProductData,
-    userData,
-    setUserData,
-    cartBillAmount,
-    setCartBillAmount,
-    adminData,
-    setAdminData,
-  ] = useContext(Context);
+  const [, , , , , , , , , , userData, setUserData] = useContext(Context);
   const [searchUser, setSearchUser] = useState(""); //value from the search bar
   const Navigate = useNavigate();
 
@@ -84,14 +67,14 @@ function UsersDetails() {
                         <div className="d-flex flex-row align-items-center me-2">
                           <Info
                             className="text-primary me-3"
-                            style={{cursor:"pointer"}}
+                            style={{ cursor: "pointer" }}
                             onClick={() => Navigate(`${element.UserName}`)}
                           />
                           <MDBIcon
                             fas
                             icon="trash-alt"
                             className="text-danger"
-                            style={{cursor:"pointer"}}
+                            style={{ cursor: "pointer" }}
                             onClick={() => DeleteUser(Index)}
                           />
                         </div>
@@ -114,9 +97,7 @@ function UsersDetails() {
                     searchUser.toLowerCase()
                   ) ? (
                     <div className="px-5 mt-2 col-md-10 mx-auto">
-                      <MDBCard
-                        className="mb-3"
-                      >
+                      <MDBCard className="mb-3">
                         <MDBCardBody className="p-1">
                           <div className="d-flex justify-content-between">
                             <div className="d-flex flex-row align-items-center">
@@ -141,14 +122,14 @@ function UsersDetails() {
                             <div className="d-flex flex-row align-items-center me-2">
                               <Info
                                 className="text-primary me-3"
-                                style={{cursor:"pointer"}}
+                                style={{ cursor: "pointer" }}
                                 onClick={() => Navigate(`${element.UserName}`)}
                               />
                               <MDBIcon
                                 fas
                                 icon="trash-alt"
                                 className="text-danger"
-                                style={{cursor:"pointer"}}
+                                style={{ cursor: "pointer" }}
                                 onClick={() => DeleteUser(Index)}
                               />
                             </div>

@@ -12,24 +12,7 @@ import { Button } from "react-bootstrap";
 import AdminNavBar from "../Nav/NavBar";
 
 function EachPerson() {
-  const [
-    login,
-    setLogin,
-    search,
-    setSearch,
-    cartlength,
-    setCartlength,
-    logedUser,
-    setLogedUser,
-    productData,
-    setProductData,
-    userData,
-    setUserData,
-    cartBillAmount,
-    setCartBillAmount,
-    adminData,
-    setAdminData,
-  ] = useContext(Context);
+  const [, , , , , , , , , , userData] = useContext(Context);
   const { ID } = useParams(); //This is the user name of each person....
   const [display, setDisplay] = useState("Purchase");
   return (

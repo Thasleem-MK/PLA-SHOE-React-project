@@ -15,24 +15,8 @@ import { useContext } from "react";
 import { Context } from "../UseContext/Context";
 
 function NavBar() {
-  const [
-    login,
-    setLogin,
-    search,
-    setSearch,
-    cartlength,
-    setCartlength,
-    logedUser,
-    setLogedUser,
-    productData,
-    setProductData,
-    userData,
-    setUserData,
-    cartBillAmount,
-    setCartBillAmount,
-    adminData,
-    setAdminData,
-  ] = useContext(Context);
+  const [login, setLogin, , setSearch, cartlength, setCartlength] =
+    useContext(Context);
   const Navigate = useNavigate();
   return (
     <div>

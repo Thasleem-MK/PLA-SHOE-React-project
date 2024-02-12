@@ -16,7 +16,7 @@ function Login() {
   TitleHook("Login");
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-  const [, setLogin, , , , setCartlength, , setLogedUser, , , userData, , , ,] =
+  const [, setLogin, , , , setCartlength, , setLogedUser, , , userData] =
     useContext(Context);
   const Navigate = useNavigate();
   const loginSubmit = () => {

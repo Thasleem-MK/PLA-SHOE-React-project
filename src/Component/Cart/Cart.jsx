@@ -18,7 +18,7 @@ import TitleHook from "../Hook/TitleHook";
 
 export default function Cart() {
   TitleHook("Cart");
-  const [, , , , , setCartlength, logedUser, , , , userData, setUserData, , ,] =
+  const [, , , , , setCartlength, logedUser, , , , userData, setUserData] =
     useContext(Context);
   const [debitCardStatus, setDebitCardStatus] = useState(false);
 
@@ -171,7 +171,10 @@ export default function Cart() {
                                                   icon="trash-alt"
                                                   className="text-danger"
                                                   onClick={() => {
-                                                    PurchaseUpdater(element,(-1*(element.Purchase))+1)
+                                                    PurchaseUpdater(
+                                                      element,
+                                                      -1 * element.Purchase + 1
+                                                    );
                                                     const updatedUserData = [
                                                       ...userData,
                                                     ]; // Create a copy of userData
@@ -356,7 +359,7 @@ export default function Cart() {
                                                 ...updatedUserData[
                                                   currentUserIndex
                                                 ].Cart
-                                              );  /////Cart push to user Purchased Product Section..........
+                                              ); /////Cart push to user Purchased Product Section..........
 
                                               updatedUserData[
                                                 currentUserIndex
